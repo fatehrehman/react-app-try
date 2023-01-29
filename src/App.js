@@ -9,9 +9,9 @@ function App() {
 
   return (
     <>
-      <Welcome datax={user} />
-      <Welcome datax={user} />
-      <Welcome datax={user} />
+      <Welcome datax="Fateh" />
+      <Welcome datax="Rehman" />
+      <Welcome datax="Wali" />
     </>
   );
 }
