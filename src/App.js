@@ -1,22 +1,19 @@
 //import logo from './logo.svg';
 import "./App.css";
-
+import Welcome from "./components/Welcome";
 function App() {
   const user = {
     firstname: "Fateh",
     lastname: "Rehman",
   };
-  function getUserName(user) {
-    return user.firstname + " " + user.lastname;
-  }
-  function getGreetings(user) {
-    if (user) {
-      return "Hi " + getUserName(user) + "!";
-    } else {
-      return "Hi Stranger!";
-    }
-  }
-  return <h1>{getGreetings(user)}</h1>;
+
+  return (
+    <>
+      <Welcome />
+      <Welcome />
+      <Welcome />
+    </>
+  );
 }
 
 export default App;
