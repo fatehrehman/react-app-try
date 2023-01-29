@@ -11,6 +11,7 @@ function clock() {
     <div>
       <h1>Hello</h1>
       <h2>Tick {new Date().toLocaleTimeString()}</h2>
+      // Only h2 element is changed as shown in the inspect window
     </div>
   );
   root.render(elementX);
