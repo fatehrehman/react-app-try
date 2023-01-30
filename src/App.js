@@ -3,10 +3,10 @@ import "./App.css";
 import Welcome from "./components/Welcome";
 import Tick from "./components/Tick";
 function App() {
-  const user = {
-    firstname: "Fateh",
-    lastname: "Rehman",
-  };
+  // const user = {
+  //   firstname: "Fateh",
+  //   lastname: "Rehman",
+  // };
 
   return (
     <>
