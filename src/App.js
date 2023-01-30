@@ -2,15 +2,26 @@
 import "./App.css";
 import Welcome from "./components/Welcome";
 import Tick from "./components/Tick";
+import { useState } from "react";
+
 function App() {
   // const user = {
   //   firstname: "Fateh",
   //   lastname: "Rehman",
   // };
+  const [flag, setFlag] = useState(true);
+
+  const reverseFlag = () => {
+    setFlag(!flag);
+  };
 
   return (
     <>
-      <Tick />
+      <button onClick={reverseFlag}>
+        {flag ? "Hide Clock" : "Show Clock"}
+      </button>
+      {flag ? <Tick /> : "No Ticekr"}
+      {/* it will stop the UseEffect cycle too and on hiding it will call the cleanup function that is to be called after UseEffect*/}
       <Welcome datax="Fateh" />
       <Welcome datax="Rehman" />
       <Welcome datax="Wali" />
