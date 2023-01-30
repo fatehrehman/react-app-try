@@ -1,13 +1,19 @@
 function Blog(props) {
   const content = props.posts.map((post) => {
-    return (
-      <div key={post.id}>
-        <li>{post.id}</li>
-        <li>{post.title}</li>
-        <li>{post.content}</li>
-      </div>
-    );
+    return <Post post={post} />;
   });
   return <div>{content}</div>;
+}
+
+function Post(props) {
+  const { id, title, content } = props.post;
+  return (
+    <div key={id}>
+      <div>ID: {id}</div>
+      <div>Title: {title}</div>
+      <div>Content: {content}</div>
+      <br />
+    </div>
+  );
 }
 export default Blog;
