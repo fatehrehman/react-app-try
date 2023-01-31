@@ -1,10 +1,11 @@
 //import logo from './logo.svg';
 import "./App.css";
-import Welcome from "./components/Welcome";
-import Tick from "./components/Tick";
-import { useState } from "react";
-import LoginController from "./components/LoginController";
-import Blog from "./components/Blog";
+import Form from "./components/Form";
+// import Welcome from "./components/Welcome";
+// import Tick from "./components/Tick";
+// import { useState } from "react";
+// import LoginController from "./components/LoginController";
+// import Blog from "./components/Blog";
 
 function App() {
   // const user = {
@@ -17,6 +18,7 @@ function App() {
   //   setFlag(!flag);
   // };
 
+  /*
   const posts = [
     {
       id: 1,
@@ -39,6 +41,7 @@ function App() {
       content: "Welcome Hello from four",
     },
   ];
+  */
 
   return (
     <>
@@ -51,7 +54,8 @@ function App() {
       {/* <Welcome datax="Rehman" /> */}
       {/* <Welcome datax="Wali" /> */}
       {/* <LoginController /> */}
-      <Blog posts={posts} />
+      {/* <Blog posts={posts} /> */}
+      <Form />
     </>
   );
 }
