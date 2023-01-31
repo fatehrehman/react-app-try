@@ -1,13 +1,17 @@
 //import logo from './logo.svg';
 import "./App.css";
-import Form from "./components/Form";
+// import Form from "./components/Form";
 // import Welcome from "./components/Welcome";
 // import Tick from "./components/Tick";
-// import { useState } from "react";
+import { useState } from "react";
 // import LoginController from "./components/LoginController";
 // import Blog from "./components/Blog";
+import Search from "./components/Search";
+import SearchResults from "./components/SearchResults";
 
 function App() {
+  const [searchText, setSearchText] = useState("");
+
   // const user = {
   //   firstname: "Fateh",
   //   lastname: "Rehman",
@@ -18,30 +22,43 @@ function App() {
   //   setFlag(!flag);
   // };
 
-  /*
+  ///*
   const posts = [
     {
       id: 1,
-      title: "Hello-1",
+      title: "Course One Abc",
       content: "Welcome Hello from One",
     },
     {
       id: 2,
-      title: "Hello-2",
+      title: "Course Two Def",
       content: "Welcome Hello from two",
     },
     {
       id: 3,
-      title: "Hello-3",
+      title: "Course Three Ghi",
       content: "Welcome Hello from three",
     },
     {
       id: 4,
-      title: "Hello-4",
+      title: "Course Four Jkl",
       content: "Welcome Hello from four",
     },
+    {
+      id: 5,
+      title: "Course Five Mno",
+      content: "Welcome Hello from five",
+    },
+    {
+      id: 6,
+      title: "Course Six Pqr",
+      content: "Welcome Hello from six",
+    },
   ];
-  */
+  const filteredPosts = posts.filter((post) => {
+    return post.title.toLowerCase().includes(searchText.toLowerCase());
+  });
+  //*/
 
   return (
     <>
@@ -55,7 +72,9 @@ function App() {
       {/* <Welcome datax="Wali" /> */}
       {/* <LoginController /> */}
       {/* <Blog posts={posts} /> */}
-      <Form />
+      {/* <Form /> */}
+      <Search searchText={searchText} setSearchText={setSearchText} />
+      <SearchResults entries={filteredPosts} />
     </>
   );
 }
