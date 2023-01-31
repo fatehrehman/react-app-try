@@ -12,6 +12,10 @@ import SearchResults from "./components/SearchResults";
 function App() {
   const [searchText, setSearchText] = useState("");
 
+  const handleSearch = (e) => {
+    setSearchText(e.target.value);
+  };
+
   // const user = {
   //   firstname: "Fateh",
   //   lastname: "Rehman",
@@ -73,7 +77,7 @@ function App() {
       {/* <LoginController /> */}
       {/* <Blog posts={posts} /> */}
       {/* <Form /> */}
-      <Search searchText={searchText} setSearchText={setSearchText} />
+      <Search searchText={searchText} handleSearch={handleSearch} />
       <SearchResults entries={filteredPosts} />
     </>
   );

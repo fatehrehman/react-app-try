@@ -5,7 +5,7 @@ function Search(props) {
       <input
         type="text"
         value={props.searchText}
-        onChange={(e) => props.setSearchText(e.target.value)}
+        onChange={props.handleSearch}
       />
     </div>
   );
